@@ -15,11 +15,6 @@ def num_sum(numb: int) -> int:
     return result
 
 
-if __name__ == '__main__':
-    assert num_sum(5216) == 14
-    print('Решено!')
-
-
 def num_sum2(numb: int) -> int:
     """
         Calculating sum of number's digits
@@ -32,5 +27,6 @@ def num_sum2(numb: int) -> int:
 
 
 if __name__ == '__main__':
+    assert num_sum(5216) == 14
     assert num_sum2(5216) == 14
     print('Решено!')

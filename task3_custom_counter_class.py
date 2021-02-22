@@ -27,11 +27,11 @@ class Counter:
         self.value += 1
         return value
 
-    def increase(self, num: int = 1) -> int:
+    def increase(self, num: int = 1):
         self.value += num
         return self.value
 
-    def decrease(self, num: int = 1) -> int:
+    def decrease(self, num: int = 1):
         self.value -= num
         return self.value
 
