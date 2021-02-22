@@ -16,32 +16,31 @@
 
 class Counter:
 
-    def __init__(self, value=0):
+    def __init__(self, value: int = 0) -> None:
         self.value = value
 
-    def __iter__(self):
+    def __iter__(self) -> object:
         return self
 
-    def __next__(self):
+    def __next__(self) -> int:
         value = self.value
         self.value += 1
         return value
 
-    def increase(self, num=1):
+    def increase(self, num: int = 1) -> int:
         self.value += num
         return self.value
 
-    def decrease(self, num=1):
+    def decrease(self, num: int = 1) -> int:
         self.value -= num
         return self.value
 
 
-x = Counter()
-
-
-
-print(next(x))
-x.increase(10)
-print(next(x))
-x.decrease(5)
-print(next(x))
+if __name__ == '__main__':
+    x = Counter()
+    assert next(x) == 0
+    assert next(x) == 1
+    assert next(x) == 2
+    assert x.increase(10) == 13
+    assert x.decrease(5) == 8
+    print('Решено!')
